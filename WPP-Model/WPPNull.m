@@ -1,0 +1,9 @@
+a=linspace(0,1,100);
+u=2.8-a;
+K=1;
+koff=1;
+k0=0.03;
+g=1;
+f=u.*(k0+g*a.^2./(K^2+a.^2))-koff*a;
+m=-u.*(k0+g*a.^2./(K^2+a.^2))+koff*a;
+plot(a,[f;m])
